@@ -12,8 +12,8 @@ console.log(submit);
 //Add the click event to get variables
 //document.addEventListener("click",)
 submit.addEventListener("click" , function() {
-    console.log(fullName);
-    console.log(kiloMeters);
+    console.log(fullNameValue);
+    console.log(kiloMetersValue);
     let result = document.querySelector(".ticket");
-    result.append("Prova")
+    result.append(fullNameValue);
 });

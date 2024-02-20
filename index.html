@@ -10,7 +10,14 @@
 <body>
     <input class="full_name" name="fullname" type="text" placeholder="Name Surname">
     <input class="kilometers" name="km" type="number" placeholder="How many km">
-    
+    <input list="ages" name="client_age" type="" placeholder="">
+    <datalist id="ages">
+        <option value="Minore di 18 anni">
+        <option value="Maggiore di 65 anni">
+        <option value="Altro">
+    </datalist>
+    <input type="submit" value="Genera" name="submit_all">
+    <input type="reset" value="Annulla" name="reset_all">
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

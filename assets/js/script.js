@@ -50,7 +50,7 @@ submit.addEventListener("click", function ()
 
     //variables for HTML - JS
     let result_name = document.querySelector(".result_name");
-    let result_km = document.querySelector(".result_km");
+    /* let result_km = document.querySelector(".result_km"); */
     let result_discount = document.querySelector(".result_discount");
     let result_final_price = document.querySelector(".result_final_price");
 
@@ -61,10 +61,14 @@ submit.addEventListener("click", function ()
     result_final_price.append(final_price.toFixed(2) + " \u20AC");
 
     //about the 2 random number create for the ticket
-    function (min, max)
-    {
-        return Math.random() * (max - min) + min;
-    }
+    let carriage = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+    console.log(carriage);
+    let CcodeP = Math.floor(Math.random() * (99999 - 90000 + 1)) + 90000;
+    console.log(CcodeP);
+    let train_carriage = document.querySelector(".train_carriage")
+    let cp_code = document.querySelector(".cp_code")
+    train_carriage.append (carriage);
+    cp_code.append(CcodeP);
 }
 );
 

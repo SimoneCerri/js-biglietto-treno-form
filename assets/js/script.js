@@ -17,7 +17,8 @@ submit.addEventListener("click", function ()
     console.log(kiloMetersValue);
     console.log(ageDiscountValue);
 
-    let result = document.querySelector(".ticket");
+    /* let result = document.querySelector(".ticket"); */
+    
     price = (kiloMeters.value) * 0.21;
     console.log(price);
     let final_price,discount,discount_percent;
@@ -47,11 +48,23 @@ submit.addEventListener("click", function ()
         console.log(final_price);
     }
 
-    //HTML input of the results
-    result.append("Ticket's owner: " + fullNameValue); 
-    result.append("Max validation: " + kiloMetersValue + "km");
-    result.append("Discount: " + discount_percent + " value of: " + discount + "\u20AC");
-    result.append("Ticket price: " + final_price.toFixed(2) + " \u20AC");
+    //variables for HTML - JS
+    let result_name = document.querySelector(".result_name");
+    let result_km = document.querySelector(".result_km");
+    let result_discount = document.querySelector(".result_discount");
+    let result_final_price = document.querySelector(".result_final_price");
+
+    //HTML input of the results inside ticket
+    result_name.append(fullNameValue); 
+    /* result_km.append("Max validation: " + kiloMetersValue + "km"); */
+    result_discount.append("Discount: " + discount_percent + " value of: " + discount + "\u20AC");
+    result_final_price.append(final_price.toFixed(2) + " \u20AC");
+
+    //about the 2 random number create for the ticket
+    function (min, max)
+    {
+        return Math.random() * (max - min) + min;
+    }
 }
 );
 

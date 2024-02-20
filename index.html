@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Biglietto Treno</title>
+    <title>Train Ticket</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -14,22 +14,23 @@
 
 <body>
     <div class="bg_page">
-        <h1 class="text-center py-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <h1 class="text-center py-3 pt-5">CALCULATE THE PRICE OF YOUR TICKET</h1>
         <div class="container bg-primary py-5 rounded">
             
-            <div class="row">
-                <div class="col-4">
-                    Nome e
-                </div>
-                <div class="col-4">
-
-                </div>
-                <div class="col-4">
-
+            <div class="row justify-content-center">
+                <div class="col-7 d-flex justify-content-between">
+                    <div>
+                        Name and Surname:
+                    </div>
+                    <div>
+                        Distance:
+                    </div>
+                    <div>
+                        Age:
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center">
-
                 <div class="col-7 d-flex gap-3 justify-content-between">
                     <input class="full_name" name="fullname" type="text" placeholder="Name & Surname">
                     <input class="kilometers" name="km" type="number" placeholder="How many km ?">
@@ -54,31 +55,68 @@
         </div>
         <!-- /.container -->
 
-        <div class="container py-5">
-            <h1 class="text-center">IL TUO BIGLIETTO</h1>
-            <div class="row bg-primary rounded">
-                <h2>Dettaglio passeggeri</h2>
+        <h1 class="text-center py-3 mt-5">YOUR TICKET</h1>
+        <div class="container bg-primary py-5 rounded">
+            <h2>Passenger details:</h2>
+            <div class="row bg-primary">
+                
                 <div class="col-4">
-                    Nome Passeggero
+                    Ticket's owner
 
                 </div>
                 <!-- /.col-4 -->
                 <div class="col-8">
                     <div class="row">
                         <div class="col-3">
-                            Offerta
+                            Special offer
                         </div>
                         <!-- /.col-3 -->
                         <div class="col-3">
-                            Carrozza
+                            Train carriage
                         </div>
                         <!-- /.col-3 -->
                         <div class="col-3">
-                            Codice CP
+                            CP Code
                         </div>
                         <!-- /.col-3 -->
                         <div class="col-3">
-                            Costo Biglietto
+                            Price
+                        </div>
+                        <!-- /.col-3 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.col-8 -->
+            </div>
+            <!-- /.row -->
+            <div class="row bg-primary">
+            
+                <div class="col-4">
+                    <div class="result_name">
+
+                    </div>
+                </div>
+                <!-- /.col-4 -->
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="result_discount">
+
+                            </div>
+                        </div>
+                        <!-- /.col-3 -->
+                        <div class="col-3">
+                           
+                        </div>
+                        <!-- /.col-3 -->
+                        <div class="col-3">
+                            
+                        </div>
+                        <!-- /.col-3 -->
+                        <div class="col-3">
+                            <div class="result_final_price">
+
+                            </div>
                         </div>
                         <!-- /.col-3 -->
                     </div>
@@ -89,8 +127,6 @@
             <!-- /.row -->
         </div>
         <!-- /.container -->
-
-        <div class="ticket"></div>
     </div>
 
 

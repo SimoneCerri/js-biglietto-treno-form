@@ -5,9 +5,11 @@ let submit = document.querySelector(".submit_form");
 let reset = document.querySelector(".reset_form");
 let ageDiscount = document.getElementById("ages");
 let discount, price;
+/* submit = [{max:1,count:0}] */
 
 //Add the click event to get variables
-submit.addEventListener("click", function () {
+submit.addEventListener("click", function ()
+{
     let fullNameValue = fullName.value;
     let kiloMetersValue = kiloMeters.value;
     let ageDiscountValue = ageDiscount.value;
@@ -26,6 +28,7 @@ submit.addEventListener("click", function () {
         console.log(discount);
         final_price = price - discount;
         console.log(final_price);
+        
     }
     else if (ageDiscountValue >= 65) //Over 65 discount and final price
     {
@@ -40,7 +43,21 @@ submit.addEventListener("click", function () {
         final_price = price;
         console.log(final_price);
     }
-    result.append(fullNameValue); //try the .append to show something in HTML
-});
+
+    //HTML input of the results
+    result.append("Ticket's owner: " + fullNameValue); 
+    result.append("Max validation: " + kiloMetersValue + " km");
+    result.append("Discount: " + discount + " ()");
+    result.append("Ticket price: " + final_price + " \u20AC");
+}
+);
+
+/* reset.addEventListener("click", function ()
+{
+    document.querySelector(".full_name").reset();
+    document.querySelector(".kilometers").reset();
+    document.querySelector(".submit_form").reset();
+}
+); */
 
 

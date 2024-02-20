@@ -20,10 +20,11 @@ submit.addEventListener("click", function ()
     let result = document.querySelector(".ticket");
     price = (kiloMeters.value) * 0.21;
     console.log(price);
-    let final_price,discount;
+    let final_price,discount,discount_percent;
 
     if (ageDiscountValue < 18) //Under 18 discount and final price
     {
+        discount_percent = ("20%");
         discount = price * 0.2;
         console.log(discount);
         final_price = price - discount;
@@ -32,12 +33,14 @@ submit.addEventListener("click", function ()
     }
     else if (ageDiscountValue >= 65) //Over 65 discount and final price
     {
+        discount_percent = ("40%");
         discount = price * 0.4;
         console.log(discount);
         final_price = price - discount;
         console.log(final_price);
     } else //Last case between 18 and 66 yo
     {
+        discount_percent = ("Full-Price");
         discount = 0;
         console.log(discount);
         final_price = price;
@@ -46,11 +49,13 @@ submit.addEventListener("click", function ()
 
     //HTML input of the results
     result.append("Ticket's owner: " + fullNameValue); 
-    result.append("Max validation: " + kiloMetersValue + " km");
-    result.append("Discount: " + discount + " ()");
-    result.append("Ticket price: " + final_price + " \u20AC");
+    result.append("Max validation: " + kiloMetersValue + "km");
+    result.append("Discount: " + discount_percent + " value of: " + discount + "\u20AC");
+    result.append("Ticket price: " + final_price.toFixed(2) + " \u20AC");
 }
 );
+
+
 
 /* reset.addEventListener("click", function ()
 {

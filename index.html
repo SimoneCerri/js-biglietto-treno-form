@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Biglietto Treno</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    
+
 </head>
+
 <body>
-    <input class="full_name" name="fullname" type="text" placeholder="Name Surname">
-    <input class="kilometers" name="km" type="number" placeholder="How many km">
-    <input list="ages" name="client_age" type="" placeholder="">
-    <datalist id="ages">
-        <option value="Minore di 18 anni">
-        <option value="Maggiore di 65 anni">
-        <option value="Altro">
-    </datalist>
-    <input type="submit" value="Genera" name="submit_all">
-    <input type="reset" value="Annulla" name="reset_all">
+    <form action="">
+        <input class="full_name" name="fullname" type="text" placeholder="Name Surname">
+        <input class="kilometers" name="km" type="number" placeholder="How many km">
+        <input class="age" list="ages" name="client_age" type="" placeholder="">
+        <datalist id="ages">
+            <option value="Minore di 18 anni">
+            <option value="Maggiore di 65 anni">
+            <option value="Altro">
+        </datalist>
+        <input class="submit_form" type="submit" value="Genera" name="submit_all">
+        <input class="reset_form" type="reset" value="Annulla" name="reset_all">
+    </form>
+    <div class="ticket">Ciao</div>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

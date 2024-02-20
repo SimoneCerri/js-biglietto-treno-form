@@ -10,19 +10,20 @@
 </head>
 
 <body>
-    <form action="">
-        <input class="full_name" name="fullname" type="text" placeholder="Name Surname">
-        <input class="kilometers" name="km" type="number" placeholder="How many km">
-        <input class="age" list="ages" name="client_age" type="" placeholder="">
-        <datalist id="ages">
-            <option value="Minore di 18 anni">
-            <option value="Maggiore di 65 anni">
-            <option value="Altro">
-        </datalist>
-        <input class="submit_form" type="" value="Genera" name="submit_all">
-        <input class="reset_form" type="reset" value="Annulla" name="reset_all">
-    </form>
+
+    <input class="full_name" name="fullname" type="text" placeholder="Name Surname">
+    <input class="kilometers" name="km" type="number" placeholder="How many km">
+    <select name="ages" id="ages">
+        <option value="">Minore di 18 anni</option>
+        <option value="">Maggiore di 65 anni</option>
+        <option value="">Altro</option>
+    </select>
+
+    <input class="submit_form" type="submit" value="Genera" name="submit_all">
+    <input class="reset_form" type="reset" value="Annulla" name="reset_all">
+
     <div class="ticket">Ciao</div>
+
     <script src="./assets/js/script.js"></script>
 </body>
 
